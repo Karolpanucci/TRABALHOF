@@ -8,7 +8,7 @@ export default async function Pessoa({ params }) {
 
     const idJson = JSON.stringify(id);
 
-    const req = await fetch("http://localhost:3003/pessoas", {
+    const req = await fetch("http://localhost:3003/produto", {
         method: "POST",
         cache: "no-cache",
         headers: { 'content-type': 'application/json' },
@@ -20,7 +20,7 @@ export default async function Pessoa({ params }) {
     const remover = () => {
         console.log(idJson)
         try {
-            fetch("http://localhost:3003/pessoas", {
+            fetch("http://localhost:3003/produto", {
                 method: "DELETE",
                 headers: { 'content-type': 'application/json' },
                 body: idJson
@@ -32,9 +32,9 @@ export default async function Pessoa({ params }) {
     }
     return (
         <div>
-            <p>{pessoa.nome}</p>
-            <p>{pessoa.idade}</p>
-            <p>{pessoa.uf}</p>
+            <p>{produtos.nome}</p>
+            <p>{produtos.idade}</p>
+            <p>{produtos.uf}</p>
             <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
 
         </div>
