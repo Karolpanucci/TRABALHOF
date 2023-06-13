@@ -32,8 +32,8 @@ export default async function Produto({ params }) {
     }
     return (
         <div>
-
-       
+            
+          <p>{produtos.imagen}</p>
           <p>{produtos.titulo}</p>
           <p>{produtos.descricao}</p>
           <p>{produtos.preco}</p>

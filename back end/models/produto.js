@@ -14,8 +14,8 @@ class Produto {
   static async selectOne(codigo) {
     try {
       const connect = await db.connect();
-      const sql = "SELECT *FROM Produto WHERE id=$1";
-      return await connect.query(sql,[id]);
+      const sql = "SELECT *FROM Produto WHERE codigo=$1";
+      return await connect.query(sql,[codigo]);
     } catch (error) {
       console.error('Erro em select:', error);
       throw error;
