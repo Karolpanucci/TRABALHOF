@@ -22,14 +22,17 @@ export default function Cadastro() {
             imagen: imagen
         }
         alert('foi cadastrado com sucesso')
+
         const produtoJson = JSON.stringify(Produto);
-        fetch("http://localhost:3003/produto", {
+       const req =  fetch("http://localhost:3003/produto", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
         console.log(req)
     } 
+    
+    
      
     return (
         <div className={styles.main}>

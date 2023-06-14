@@ -7,11 +7,11 @@ export default async function Home() {
     cache: "no-cache"
   });
   const produtos = await req.json();
-
+  console.log(produtos)
   return (
     <main> <Link href="/cadastro" className='voltar'> CADASTRAR </Link>
 
-      {produtos.map(produtos => (
+      {produtos.map(produtos=> (
         <div key={produtos.codigo}>
           <p>{produtos.titulo}</p>
           <p>{produtos.descricao}</p>

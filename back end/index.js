@@ -21,9 +21,9 @@ app.get('/produto', async function(req, res){
   }
 });
 
-app.post('/produto', async function(req, res){
+app.post('/produto', async function(req, res){ console.log('inserido');
   try {
-    var produtos = await Produto.selectOne(req.body.id);
+    var produtos = await Produto.insert(req.body);
     res.json(produtos.rows[0]);
   } catch (error) {
     console.error('Erro ao buscar pessoas:', error);
