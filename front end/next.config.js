@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-
+  experimental: {
+    appDir: true,
+    },
+    images:{
+    domains: [ "cdn.panelinha.com.br"]},
     async rewrites() {
         return [
           {
@@ -12,3 +16,6 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
+
+  
+  
