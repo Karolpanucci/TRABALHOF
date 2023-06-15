@@ -16,8 +16,8 @@ app.get('/produto', async function(req, res){
     var produto = await Produto.select();
     res.json(produto.rows);
   } catch (error) {
-    console.error('Erro ao buscar pessoas:', error);
-    res.status(500).json({ error: 'Ocorreu um erro ao buscar pessoas' });
+    console.error('Erro ao buscar produtos:', error);
+    res.status(500).json({ error: 'Ocorreu um erro ao buscar produtos' });
   }
 });
 
@@ -26,8 +26,8 @@ app.get('/produto/:codigo', async function(req, res){
     var produto = await Produto.selectOne(req.params.codigo);
     res.json(produto.rows);
   } catch (error) {
-    console.error('Erro ao buscar pessoas:', error);
-    res.status(500).json({ error: 'Ocorreu um erro ao buscar pessoas' });
+    console.error('Erro ao buscar produtos:', error);
+    res.status(500).json({ error: 'Ocorreu um erro ao buscar produtos' });
   }
 });
 
@@ -36,8 +36,8 @@ app.post('/produto', async function(req, res){ console.log('inserido');
     var produtos = await Produto.insert(req.body);
     res.json(produtos.rows[0]);
   } catch (error) {
-    console.error('Erro ao buscar pessoas:', error);
-    res.status(500).json({ error: 'Ocorreu um erro ao buscar pessoas' });
+    console.error('Erro ao buscar produtos:', error);
+    res.status(500).json({ error: 'Ocorreu um erro ao buscar produtos' });
   }
 });
 
