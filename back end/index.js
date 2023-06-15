@@ -21,6 +21,16 @@ app.get('/produto', async function(req, res){
   }
 });
 
+app.get('/produto/:codigo', async function(req, res){
+  try {
+    var produto = await Produto.selectOne(req.params.codigo);
+    res.json(produto.rows);
+  } catch (error) {
+    console.error('Erro ao buscar pessoas:', error);
+    res.status(500).json({ error: 'Ocorreu um erro ao buscar pessoas' });
+  }
+});
+
 app.post('/produto', async function(req, res){ console.log('inserido');
   try {
     var produtos = await Produto.insert(req.body);
@@ -43,8 +53,7 @@ app.post('/produto', async function(req,res){
 
 app.delete('/produto', async function(req, res){
   try {
-    console.log(req.body.codigo)
-    var produto = await Produto.delete(req.body.id);
+    var produto = await Produto.delete(req.body.codigo);
     res.json(produto.rows);
   } catch (error) {
     console.error('Erro ao atualizar pessoa:', error);

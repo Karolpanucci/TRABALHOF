@@ -4,23 +4,20 @@ import { useRouter } from "next/navigation";
 
 export default async function Produto({ params }) {
     const router = useRouter();
-    const codigo = { codigo: parseInt(params.codigo) }
 
-    const codigoJson = JSON.stringify(codigo);
-
-    const req = await fetch("http://localhost:3003/produto", {
-        method: "POST",
+    const req = await fetch("http://localhost:3003/produto/" + params.codigo, {
+        method: "GET",
         cache: "no-cache",
-        headers: { 'content-type': 'application/json' },
-        body: codigoJson
+        headers: { 'content-type': 'application/json' }
     })
-    const produtos = await req.json();
-
+    const res = await req.json();
+    const produto = res[0];
 
     const remover = () => {
-        console.log(codigoJson)
+        const codigoJson= JSON.stringify({codigo: produto.codigo})
+     
         try {
-            fetch("http://localhost:3003/produtos", {
+            fetch("http://localhost:3003/produto", {
                 method: "DELETE",
                 headers: { 'content-type': 'application/json' },
                 body:codigoJson
@@ -30,14 +27,16 @@ export default async function Produto({ params }) {
             alert("Ocorreu um erro" + error)
         }
     }
+
     return (
+        
         <div>
-            
-          <p>{produtos.imagen}</p>
-          <p>{produtos.titulo}</p>
-          <p>{produtos.descricao}</p>
-          <p>{produtos.preco}</p>
-          <p>{produtos.dateCadastro}</p>
+            OIOIOI
+          <p>{produto.imagen}</p>
+          <p>{produto.titulo}</p>
+          <p>{produto.descricao}</p>
+          <p>{produto.preco}</p>
+          <p>{produto.dateCadastro}</p>
             <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
 
         </div>
