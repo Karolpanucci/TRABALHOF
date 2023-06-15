@@ -4,15 +4,9 @@ const nextConfig = {
     appDir: true,
     },
     images:{
-    domains: [ "cdn.panelinha.com.br"]},
-    async rewrites() {
-        return [
-          {
-            source: '/api/:path*',
-            destination: 'https://localhost:3003/',
-          },
-        ]
-      },
+    domains: [ "cdn.panelinha.com.br"]
+  
+  },
 }
 
 module.exports = nextConfig

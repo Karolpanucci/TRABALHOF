@@ -18,8 +18,8 @@ export default function Cadastro() {
             titulo: titulo,
             descricao: descricao,
             preco: preco,
-            dateCadastro: dateCadastro,
-            imagen: imagen
+            dataCadastro: dateCadastro,
+            imagem: imagen
         }
         alert('foi cadastrado com sucesso')
 
@@ -62,7 +62,7 @@ export default function Cadastro() {
                     onChange={e => setImagen(e.target.value)}
                 /><br/>
                    <input
-                    type="text"
+                    type="date"
                     placeholder='Data Atual:'
                     nome="dateCadastro"
                     onChange={e => setDateCadastro(e.target.value)}
