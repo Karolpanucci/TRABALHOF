@@ -49,24 +49,22 @@ export default async function Home() {
 <nav className="flex h-14 bg-stone-50 ">
 
   <div className=" border border-gray-200 text-white w-24"> karol</div>
-  <div className=" flex border  border-gray-200 w-96 bg-cyan-500 text-white transition-colors "><p className=" mt-3 ml-20 flex "> < PlusCircle/> <Link href="/cadastro" className="">Adicionar Novos Produtos </Link></p></div>
-  <div className=" flex border  border-gray-200 w-96 hover:bg-cyan-500 hover:text-white transition-colors "><p className=" mt-3 ml-20 flex text-gray-700"> <Candy/> <Link href="/cadastro" className="">Sobre Nossos Produtos</Link></p></div>
-  <div className=" flex border  border-gray-200 w-96 hover:bg-cyan-500 hover:text-white transition-colors "><p className=" mt-3 ml-20 flex text-gray-700"> <Instagram/> <Link href="/cadastro" className=""> Nosso Instagram </Link></p></div>
+  <div className=" flex border  border-gray-200 w-96 hover:bg-cyan-500 hover:text-white  transition-colors "><p className=" mt-3 ml-20 flex "> < PlusCircle/> <Link href="/cadastro" className="">Adicionar Novos Produtos </Link></p></div>
+  <div className=" flex border  border-gray-200 w-96  hover:bg-cyan-500 hover:text-white  transition-colors "><p className=" mt-3 ml-20 flex"> <Candy/> <Link href="/cadastro" className="">Sobre Nossos Produtos</Link></p></div>
+  <div className=" flex border  border-gray-200 w-96 hover:bg-cyan-500 hover:text-white  transition-colors "><p className=" mt-3 ml-20 flex"> <Instagram/> <Link href="/cadastro" className=""> Nosso Instagram </Link></p></div>
   <div className=" border border-gray-200 text-white w-24"> karol</div>
 
 
 
 </nav>
+  <div className="px-80">
+
+       
+  </div>
+        
 
 
-
-
-      <div className="items-center">
-        <Image
-        src="/semana.png"
-        width={200}
-        height={200}/>
-       </div>
+      
 <div className="grid grid-cols-4 ml-28 mr-28 gap-4 mt-10 ">
    
     {produtos.map(produtos=> (
