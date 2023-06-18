@@ -46,7 +46,7 @@ export default async function Produto({ params }) {
     return (
         
         <div>
-            <Menu/>
+          
               <div><Link href="/" className=" flex ml-28 mt-7 "><ChevronLeft/>Voltar</Link></div>
             <div className="font-normal text-sm text-slate-900 ml-28 mt-10">Você esta vizualiznado:<spam className="font-medium text-base text-slate-800 "> {produto.titulo}</spam> </div>
            
