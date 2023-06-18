@@ -34,17 +34,26 @@ class Produto {
     }
   }
 
-  static async update(id, data) {
+  static async update(codigo, data) {
     try {
       const connect = await db.connect();
-      const sql = "";
-      const values = [data.nome, data.idade, data.uf, id];
+      const sql = `
+        UPDATE produtos
+        SET titulo = $1,
+            dataCadastro = $2,
+            preco = $3,
+            descricao = $4,
+            imagem = $5
+        WHERE codigo = $6
+      `;
+      const values = [data.titulo, data.dataCadastro, data.preco, data.descricao, data.imagem, codigo];
       return await connect.query(sql, values);
     } catch (error) {
       console.error('Erro em update:', error);
       throw error;
     }
   }
+  
 
   static async delete(codigo) {
     try {

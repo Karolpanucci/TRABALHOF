@@ -13,15 +13,19 @@ const images = [
 export default function Carrossel() {
   const settings = {
     // Configurações do carrossel...
+    dots: true,
+    infinite: true,
+    speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
-    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
   };
 
   return (
     <div className="w-full h-full overflow-hidden">
-      <div className="mx-auto" style={{ maxWidth: '1270px', maxHeight: '100vh' }}>
+      <div className="mx-auto" style={{ maxWidth: '1246px', maxHeight: '100vh' }}>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index} className="flex justify-center items-center h-full">

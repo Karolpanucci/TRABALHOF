@@ -5,6 +5,7 @@ import Link from 'next/link';
 import 'src/app/globals.css'
 import Image from 'next/image';
 import { UserCircle, ShoppingCart, PlusCircle, Candy, Instagram } from 'lucide-react';
+import Menu from '../../../componentes/menu';
 
 export default function Cadastro() {
     const route = useRouter();
@@ -39,6 +40,7 @@ export default function Cadastro() {
      
     return (
               <>
+<Menu/>
 
 
 

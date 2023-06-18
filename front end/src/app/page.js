@@ -15,8 +15,8 @@ export default async function Home() {
   console.log(produtos)
   return (
     <> 
-    <Menu/>
-      <Carrossel/>
+           <Menu/>
+         <Carrossel/>
      
 
   <div className="flex ml-96 mt-10">
@@ -30,20 +30,25 @@ export default async function Home() {
 
 
       
-<div className="grid grid-cols-4 ml-28 mr-28 gap-4  mt-8 ">
-   
-    {produtos.map(produtos=> (
-      <div  className=" border w-full justify-center items-center rounded-[7px] h-full border-gray-200 hover:border-cyan-500"> 
-        <div key={produtos.codigo}>
-        <div className="w-40 h-40 ml-12  mt-8"> <img className="rounded-[5px]" src={produtos.imagem}/></div>  
-          <div className=" font-medium text-base text-slate-800 px-24 mt-2">{produtos.titulo}</div>
-          <div className=" font-normal text-sm text-rose-400 ml-28 mt-3">por:</div>
-          <div className=" font-bold text-xl text-slate-900 px-24 mt-5" >{produtos.preco}</div>
-          <button className="m-10 border border-cyan-500 font-bold text-base text-cyan-500 rounded-[7px] w-44 h-11 items-center   hover:bg-cyan-500 hover:text-white"><Link  href={`/produto/${produtos.codigo}`}>VER DETALHES</Link></button>
-        </div>
-        </div>
-      ))}
-      
+  <div className="grid grid-cols-4 ml-7 mr-7 gap-4 mt-8 ">
+  {produtos.map((produto) => (
+    <div
+      key={produto.codigo}
+      className="border border-gray-200 rounded-md hover:shadow-2xl transition-shadow duration-300"
+    >
+      <div className="w-40 h-40 mx-auto mt-8">
+        <img className="rounded-md" src={produto.imagem} alt={produto.titulo} />
+      </div>
+      <div className="text-base text-slate-800 px-4 mt-2 font-medium text-center">{produto.titulo}</div>
+      <div className="text-sm text-rose-400 ml-4 mt-3 text-center">por:</div>
+      <div className="text-xl text-slate-900 px-4 mt-5 font-bold text-center">R{produto.preco}</div>
+      <div className="flex justify-center">
+        <button className="m-10 border border-cyan-500 text-base text-cyan-500 rounded-md w-44 h-11 items-center hover:bg-cyan-500 hover:text-white">
+          <Link href={`/produto/${produto.codigo}`}>VER DETALHES</Link>
+        </button>
+      </div>
+    </div>
+  ))}
 </div>
      
     </>
