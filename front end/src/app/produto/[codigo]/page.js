@@ -1,6 +1,7 @@
 'use client'
 
 import { useRouter } from "next/navigation";
+import Menu from "../../../../componentes/menu";
 
 export default async function Produto({ params }) {
     const router = useRouter();
@@ -28,18 +29,34 @@ export default async function Produto({ params }) {
         }
     }
 
+    const produtos = {
+        dataCadastro: new Date() // Data de exemplo
+      };
+      
+      // Obtém as partes da data
+      const dia = produtos.dataCadastro.getDate().toString().padStart(2, '0');
+      const mes = (produtos.dataCadastro.getMonth() + 1).toString().padStart(2, '0');
+      const ano = produtos.dataCadastro.getFullYear();
+      
+      // Formata a data no formato "dd/mm/aaaa"
+      const dataFormatada = `${dia}/${mes}/${ano}`;
+
     return (
         
         <div>
-       <img src={produto.imagem}/>
-          <p>{produto.titulo}</p>
-          <p>{produto.descricao}</p>
-          <p>{produto.preco}</p>
-          <p>{produto.datacadastro}</p>
-            <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
-            <button> <a href=""></a>REMOVER</button>
+            <Menu/>
+            <div className="font-normal text-sm text-slate-900 ml-28 mt-10">Você esta vizualiznado:<spam className="font-medium text-base text-slate-800 "> {produto.titulo}</spam> </div>
+           
+           <div className="grid grid-cols-2">
+                      <div className="ml-28  mt-8"> <img className="rounded-[5px]" width={500} height={600} src={produto.imagem}/></div>
+                   <div className="mt-10 "> <spam className="font-bold text-2xl text-slate-600 " >{produto.titulo}</spam>
+                     <div className=" font-normal text-base text-rose-400  mt-2">{produto.descricao}</div>
+                    <p>{produto.preco}</p>
+                    <p>{dataFormatada}</p>
+                        <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
+                        </div>   
 
-
+           </div>
         </div>
 
     )
