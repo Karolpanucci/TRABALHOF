@@ -9,7 +9,7 @@ import Menu from '../../componentes/menu'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Projeto aula',
+  title: 'CindyK Briagdeiros',
   description: 'Simulando consumo de api com JsonServer',
 }
 
