@@ -2,9 +2,10 @@
 import Link from 'next/link';
 import 'src/app/globals.css'
 import Image from 'next/image';
-import { UserCircle, ShoppingCart, PlusCircle, Candy, Instagram, Twitch, CreditCard, CircleDollarSign } from 'lucide-react';
+import {  Instagram, Twitch, CreditCard, CircleDollarSign } from 'lucide-react';
 import Menu from '../../componentes/menu';
 import Carrossel from '../../componentes/carrosel';
+import Fotter from '../../componentes/Fotter';
 
 export default async function Home() {
 
@@ -35,7 +36,7 @@ export default async function Home() {
           {produtos.map((produto) => (
             <div
               key={produto.codigo}
-              className="border border-gray-200 rounded-md hover:shadow-2xl transition-shadow duration-300"
+              className="border border-gray-200 rounded-xl hover:shadow-2xl transition-shadow duration-300"
             >
               <div className="w-40 h-40 mx-auto mt-8">
                 <img className="rounded-md" src={produto.imagem} alt={produto.titulo} />

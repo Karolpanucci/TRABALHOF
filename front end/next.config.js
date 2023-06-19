@@ -7,6 +7,10 @@ const nextConfig = {
     domains: [ "cdn.panelinha.com.br"]
   
   },
+  images:{
+    domains: [ "www.guiadasemana.com.br"]
+  
+  },
 }
 
 module.exports = nextConfig
