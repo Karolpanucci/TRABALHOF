@@ -28,7 +28,7 @@ export default function Cadastro() {
         alert('foi cadastrado com sucesso')
 
         const produtoJson = JSON.stringify(Produto);
-       const req =  fetch("https://servidor-omega.vercel.app/produto", {
+       const req =  fetch("https://servidor-inky.vercel.app/produto", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
