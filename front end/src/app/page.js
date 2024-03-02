@@ -1,18 +1,18 @@
 "use client"
 import Link from 'next/link';
-import 'src/app/globals.css'
+import '@/app/'
 import Image from 'next/image';
 import {  Instagram, Twitch, CreditCard, CircleDollarSign } from 'lucide-react';
 import Menu from '../../componentes/menu';
 import Carrossel from '../../componentes/carrosel';
-import Fotter from '../../componentes/Fotter';
+import Fotter from '../../public/Fotter';
 
 export default async function Home() {
 
   const req = await fetch("http://localhost:3003/produto", {
     cache: "no-cache"
   });
-  const produtos = await req.json();
+  const produtos = [await req.json()];
   console.log(produtos)
   return (
     <> 

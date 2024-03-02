@@ -40,13 +40,7 @@ export default async function Menu() {
 </div>
 </div>
 </sidbar>
-<nav className="flex h-14 w-full bg-stone-50 ">
 
-<div className=" border border-gray-200 text-stone-50 w-24"> karol</div>
-<div className=" flex border  border-gray-200 w-96 hover:bg-cyan-500 hover:text-white  transition-colors "><p className=" mt-3 ml-20 flex "> < PlusCircle/> <Link href="/cadastro" className="">Adicionar Novos Produtos </Link></p></div>
-<div className=" flex border  border-gray-200 w-96 hover:bg-cyan-500 hover:text-white  transition-colors"><p className=" mt-3 ml-20 flex"> <Candy/> <Link href="/cadastro" className="">Sobre Nossos Produtos</Link></p></div>
-<div className=" flex border  border-gray-200 w-96 hover:bg-cyan-500 hover:text-white  transition-colors "><p className=" mt-3 ml-20 flex"> <Instagram/> <Link href="https://www.instagram.com/casadodoce/" className=""> Nosso Instagram </Link></p></div>
-<div className=" border border-gray-200 text-stone-50 w-24"> karol</div>
 
 
 

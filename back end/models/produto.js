@@ -11,6 +11,8 @@ class Produto {
       throw error;
     }
   }
+  /*static é uma função que não precisa criar um objeto, pode chamar da classe */ 
+  /*async é para acessar o banco de dados */
   static async selectOne(codigo) {
     try {
       const connect = await db.connect();
@@ -54,7 +56,7 @@ class Produto {
     }
   }
   
-
+  /*estamos declarando um método estático assíncrono. Isso significa que o método pode ser chamado diretamente na classe e também pode operar de forma assíncrona usando a sintaxe await para aguardar a resolução de Promessas.*/ 
   static async delete(codigo) {
     try {
       const connect = await db.connect();

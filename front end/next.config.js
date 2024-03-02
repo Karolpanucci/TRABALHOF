@@ -11,6 +11,10 @@ const nextConfig = {
     domains: [ "www.guiadasemana.com.br"]
   
   },
+  images:{
+    domains: [ "www.confeiteiradesucesso.com"]
+  
+  },
 }
 
 module.exports = nextConfig
