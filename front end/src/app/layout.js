@@ -1,6 +1,6 @@
 import { Import } from 'lucide-react'
 
-import './globals.css'
+import './page.module.css'
 import { Inter } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'

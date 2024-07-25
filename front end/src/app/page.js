@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link';
-import '@/app/'
 import Image from 'next/image';
+import "./page.module.css"
 import {  Instagram, Twitch, CreditCard, CircleDollarSign } from 'lucide-react';
 import Menu from '../../componentes/menu';
 import Carrossel from '../../componentes/carrosel';

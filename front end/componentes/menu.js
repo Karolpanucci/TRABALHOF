@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import 'src/app/globals.css'
+
 import Image from 'next/image';
 import { UserCircle, ShoppingCart, PlusCircle, Candy, Instagram } from 'lucide-react';
 
@@ -44,7 +44,7 @@ export default async function Menu() {
 
 
 
-</nav>
+
 
 
 
